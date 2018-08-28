@@ -1,0 +1,13 @@
+I currently have no plans or thoughts about the front-end.
+
+About the back-end, I'll build some data structures.
+
+1) A set that will be used for the "taking random letters or each round" bit.
+
+2) A set that can store strings and allow for searching. Probably a trie.
+
+3) Something that can store player values, such as scores.
+
+4) ???
+
+5) Profit.
