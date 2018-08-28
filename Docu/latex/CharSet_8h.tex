@@ -1,0 +1,120 @@
+\hypertarget{CharSet_8h}{\section{/home/mintmov/\-Documents/\-Escuela/tutti-\/frutti/\-Char\-Set/\-Char\-Set.h File Reference}
+\label{CharSet_8h}\index{/home/mintmov/\-Documents/\-Escuela/tutti-\/frutti/\-Char\-Set/\-Char\-Set.\-h@{/home/mintmov/\-Documents/\-Escuela/tutti-\/frutti/\-Char\-Set/\-Char\-Set.\-h}}
+}
+
+
+Defines the \hyperlink{structCharSet}{Char\-Set} data structure.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structCharSetNode}{Char\-Set\-Node}
+\begin{DoxyCompactList}\small\item\em A Node of a list. \end{DoxyCompactList}\item 
+struct \hyperlink{structCharSet}{Char\-Set}
+\begin{DoxyCompactList}\small\item\em A \hyperlink{structCharSet}{Char\-Set}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structCharSetNode}{Char\-Set\-Node} $\ast$ \hyperlink{CharSet_8h_a722ed98732f1f04e4332b8da4ce4df3d}{Char\-Set\-Node\-\_\-make} (char L)
+\item 
+void \hyperlink{CharSet_8h_a580b10bdeeef9661a0b914d1a434fffb}{Char\-Set\-Node\-\_\-free} (\hyperlink{structCharSetNode}{Char\-Set\-Node} $\ast$N)
+\item 
+\hyperlink{structCharSet}{Char\-Set} $\ast$ \hyperlink{CharSet_8h_ac7b1c353118c9d2369d6d93f91518d58}{Char\-Set\-\_\-make} (void)
+\item 
+void \hyperlink{CharSet_8h_a659539c9414f5d6a08325ad8e7323ba6}{Char\-Set\-\_\-free} (\hyperlink{structCharSet}{Char\-Set} $\ast$S)
+\item 
+void \hyperlink{CharSet_8h_a68c979ebbd08740c984651ad3cbe1fa0}{pf\-\_\-\-Char\-Set\-\_\-sort} (\hyperlink{structCharSet}{Char\-Set} $\ast$S)
+\begin{DoxyCompactList}\small\item\em Sorts a list by I\-Ds, randomizing it. A merge sort is used, sorting in O(\-Nlog\-N). \end{DoxyCompactList}\item 
+char \hyperlink{CharSet_8h_a12e2887b60bc5130525919dc3fb73cb3}{Char\-Set\-\_\-pop} (\hyperlink{structCharSet}{Char\-Set} $\ast$S)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines the \hyperlink{structCharSet}{Char\-Set} data structure. \hyperlink{structCharSet}{Char\-Set} can be initialized with all the letters of the english alphabet and allows extraction of random letters.
+
+It's implemented as a singly linked list. Each node contains a letter and a random I\-D number. When it's initialized, the set is populated with all letters of the alphabet and sorted by these random I\-D numbers, randomizing it.
+
+Extracting a random letter is done by extracting the head of the list. 
+
+\subsection{Function Documentation}
+\hypertarget{CharSet_8h_a659539c9414f5d6a08325ad8e7323ba6}{\index{Char\-Set.\-h@{Char\-Set.\-h}!Char\-Set\-\_\-free@{Char\-Set\-\_\-free}}
+\index{Char\-Set\-\_\-free@{Char\-Set\-\_\-free}!CharSet.h@{Char\-Set.\-h}}
+\subsubsection[{Char\-Set\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void Char\-Set\-\_\-free (
+\begin{DoxyParamCaption}
+\item[{{\bf Char\-Set} $\ast$}]{S}
+\end{DoxyParamCaption}
+)}}\label{CharSet_8h_a659539c9414f5d6a08325ad8e7323ba6}
+Frees a set from memory. 
+\begin{DoxyParams}{Parameters}
+{\em Pointer} & to the set. \\
+\hline
+\end{DoxyParams}
+\hypertarget{CharSet_8h_ac7b1c353118c9d2369d6d93f91518d58}{\index{Char\-Set.\-h@{Char\-Set.\-h}!Char\-Set\-\_\-make@{Char\-Set\-\_\-make}}
+\index{Char\-Set\-\_\-make@{Char\-Set\-\_\-make}!CharSet.h@{Char\-Set.\-h}}
+\subsubsection[{Char\-Set\-\_\-make}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Char\-Set}$\ast$ Char\-Set\-\_\-make (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{CharSet_8h_ac7b1c353118c9d2369d6d93f91518d58}
+Initializes a \hyperlink{structCharSet}{Char\-Set} for use. \begin{DoxyReturn}{Returns}
+Pointer to the built set. 
+\end{DoxyReturn}
+\hypertarget{CharSet_8h_a12e2887b60bc5130525919dc3fb73cb3}{\index{Char\-Set.\-h@{Char\-Set.\-h}!Char\-Set\-\_\-pop@{Char\-Set\-\_\-pop}}
+\index{Char\-Set\-\_\-pop@{Char\-Set\-\_\-pop}!CharSet.h@{Char\-Set.\-h}}
+\subsubsection[{Char\-Set\-\_\-pop}]{\setlength{\rightskip}{0pt plus 5cm}char Char\-Set\-\_\-pop (
+\begin{DoxyParamCaption}
+\item[{{\bf Char\-Set} $\ast$}]{S}
+\end{DoxyParamCaption}
+)}}\label{CharSet_8h_a12e2887b60bc5130525919dc3fb73cb3}
+Extracts a random letter from the set. 
+\begin{DoxyParams}{Parameters}
+{\em Pointer} & to the set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Letter extracted. 
+\end{DoxyReturn}
+\hypertarget{CharSet_8h_a580b10bdeeef9661a0b914d1a434fffb}{\index{Char\-Set.\-h@{Char\-Set.\-h}!Char\-Set\-Node\-\_\-free@{Char\-Set\-Node\-\_\-free}}
+\index{Char\-Set\-Node\-\_\-free@{Char\-Set\-Node\-\_\-free}!CharSet.h@{Char\-Set.\-h}}
+\subsubsection[{Char\-Set\-Node\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void Char\-Set\-Node\-\_\-free (
+\begin{DoxyParamCaption}
+\item[{{\bf Char\-Set\-Node} $\ast$}]{N}
+\end{DoxyParamCaption}
+)}}\label{CharSet_8h_a580b10bdeeef9661a0b914d1a434fffb}
+Frees a node from memory. 
+\begin{DoxyParams}{Parameters}
+{\em Pointer} & to the node. \\
+\hline
+\end{DoxyParams}
+\hypertarget{CharSet_8h_a722ed98732f1f04e4332b8da4ce4df3d}{\index{Char\-Set.\-h@{Char\-Set.\-h}!Char\-Set\-Node\-\_\-make@{Char\-Set\-Node\-\_\-make}}
+\index{Char\-Set\-Node\-\_\-make@{Char\-Set\-Node\-\_\-make}!CharSet.h@{Char\-Set.\-h}}
+\subsubsection[{Char\-Set\-Node\-\_\-make}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Char\-Set\-Node}$\ast$ Char\-Set\-Node\-\_\-make (
+\begin{DoxyParamCaption}
+\item[{char}]{L}
+\end{DoxyParamCaption}
+)}}\label{CharSet_8h_a722ed98732f1f04e4332b8da4ce4df3d}
+Initializes a node holding a specified letter. 
+\begin{DoxyParams}{Parameters}
+{\em The} & letter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the built node. 
+\end{DoxyReturn}
+\hypertarget{CharSet_8h_a68c979ebbd08740c984651ad3cbe1fa0}{\index{Char\-Set.\-h@{Char\-Set.\-h}!pf\-\_\-\-Char\-Set\-\_\-sort@{pf\-\_\-\-Char\-Set\-\_\-sort}}
+\index{pf\-\_\-\-Char\-Set\-\_\-sort@{pf\-\_\-\-Char\-Set\-\_\-sort}!CharSet.h@{Char\-Set.\-h}}
+\subsubsection[{pf\-\_\-\-Char\-Set\-\_\-sort}]{\setlength{\rightskip}{0pt plus 5cm}void pf\-\_\-\-Char\-Set\-\_\-sort (
+\begin{DoxyParamCaption}
+\item[{{\bf Char\-Set} $\ast$}]{S}
+\end{DoxyParamCaption}
+)}}\label{CharSet_8h_a68c979ebbd08740c984651ad3cbe1fa0}
+
+
+Sorts a list by I\-Ds, randomizing it. A merge sort is used, sorting in O(\-Nlog\-N). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Pointer} & to the set. \\
+\hline
+\end{DoxyParams}
