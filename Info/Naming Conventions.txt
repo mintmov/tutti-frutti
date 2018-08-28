@@ -10,8 +10,8 @@ Naming convention:
  "pf_" + StructName + function_name_in_snake_case.
  Ex.: pf_CharSet_sort.
 
- .Local variables: lowercase.
- Ex. low, high, mid, var.
+ .Local variables: lowercase or snake_case.
+ Ex. low, high, mid, node_1, node_2.
 
  .Global variables: "G_" + name in lowercase.
 

@@ -16,10 +16,12 @@
 #ifndef   INCLUDE_CHARSET_H
 #define   INCLUDE_CHARSET_H
 
+#include <stdlib.h>
+
 /**
  * @brief A Node of a list.
  */
-typedef struct {
+typedef struct CharSetNode {
   char letter; /**< Letter. */
   short random; /**< Random ID number. */
   struct CharSetNode* next; /**< Pointer to next node. */
@@ -42,7 +44,7 @@ void CharSetNode_free ( CharSetNode* N );
 /**
  * @brief A CharSet.
  */
-typedef struct {
+typedef struct CharSet {
   CharSetNode* head; /**< The head of the list. */
   short size; /**< The number of remaining nodes. */
 } CharSet;
@@ -68,6 +70,7 @@ void pf_CharSet_sort ( CharSet* S );
 
 /**
  * Extracts a random letter from the set.
+ * Returns '\0' if the list is empty.
  * @param Pointer to the set.
  * @return Letter extracted.
  */
