@@ -1,0 +1,157 @@
+\hypertarget{WordSet_8h}{\section{/home/mintmov/\-Documents/\-Escuela/tutti-\/frutti/\-Word\-Set/\-Word\-Set.h File Reference}
+\label{WordSet_8h}\index{/home/mintmov/\-Documents/\-Escuela/tutti-\/frutti/\-Word\-Set/\-Word\-Set.\-h@{/home/mintmov/\-Documents/\-Escuela/tutti-\/frutti/\-Word\-Set/\-Word\-Set.\-h}}
+}
+
+
+Defines the \hyperlink{structWordSet}{Word\-Set} data structure.  
+
+
+{\ttfamily \#include $<$stdbool.\-h$>$}\\*
+{\ttfamily \#include $<$ctype.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structWordSetNode}{Word\-Set\-Node}
+\begin{DoxyCompactList}\small\item\em A trie node. children\mbox{[}letter-\/'0'\mbox{]} == N\-U\-L\-L if there is no child with 'letter'. \end{DoxyCompactList}\item 
+struct \hyperlink{structWordSet}{Word\-Set}
+\begin{DoxyCompactList}\small\item\em A \hyperlink{structWordSet}{Word\-Set}. children\mbox{[}letter-\/'0'\mbox{]} == N\-U\-L\-L if there is no child with 'letter'. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{WordSet_8h_a6572f1706059832f94025fa12c6c45ed}{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-S\-I\-Z\-E}~26
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structWordSetNode}{Word\-Set\-Node} \hyperlink{WordSet_8h_a328a936fc0cea5a9936ca8723a01938c}{Word\-Set\-Node}
+\begin{DoxyCompactList}\small\item\em A trie node. children\mbox{[}letter-\/'0'\mbox{]} == N\-U\-L\-L if there is no child with 'letter'. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structWordSet}{Word\-Set} \hyperlink{WordSet_8h_a6bade9b0803c693bdfecf09d680a5239}{Word\-Set}
+\begin{DoxyCompactList}\small\item\em A \hyperlink{structWordSet}{Word\-Set}. children\mbox{[}letter-\/'0'\mbox{]} == N\-U\-L\-L if there is no child with 'letter'. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structWordSetNode}{Word\-Set\-Node} $\ast$ \hyperlink{WordSet_8h_a96cd3985f7e4feded1b84f04bc5be5f1}{Word\-Set\-Node\-\_\-make} (char L, bool E\-O\-W)
+\item 
+void \hyperlink{WordSet_8h_a91ec5b8d8679c8473145bbb57a47d020}{Word\-Set\-Node\-\_\-free} (\hyperlink{structWordSetNode}{Word\-Set\-Node} $\ast$N)
+\item 
+\hyperlink{structWordSet}{Word\-Set} $\ast$ \hyperlink{WordSet_8h_ad7b4c228c4f4a22c48a2394a05907e10}{Word\-Set\-\_\-make} (void)
+\item 
+void \hyperlink{WordSet_8h_a91f67820e6d32a88b4427cf8112ac45d}{Word\-Set\-\_\-free} (\hyperlink{structWordSet}{Word\-Set} $\ast$W\-S)
+\item 
+void \hyperlink{WordSet_8h_ab08585df672f28b44ee9bd7f5fd56ce6}{Word\-Set\-\_\-insert} (\hyperlink{structWordSet}{Word\-Set} $\ast$W\-S, char $\ast$str)
+\item 
+bool \hyperlink{WordSet_8h_a8219431f1280ec689b0bfedc5c030f6f}{Word\-Set\-\_\-contains} (\hyperlink{structWordSet}{Word\-Set} $\ast$W\-S, char $\ast$str)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines the \hyperlink{structWordSet}{Word\-Set} data structure. \hyperlink{structWordSet}{Word\-Set} allows insertion of strings and consulting wether a string is contained or not.
+
+It's implemented with a trie. Each node contains an array of children (pointers to trie nodes). 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{WordSet_8h_a6572f1706059832f94025fa12c6c45ed}{\index{Word\-Set.\-h@{Word\-Set.\-h}!A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-S\-I\-Z\-E@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-S\-I\-Z\-E}}
+\index{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-S\-I\-Z\-E@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-S\-I\-Z\-E}!WordSet.h@{Word\-Set.\-h}}
+\subsubsection[{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-S\-I\-Z\-E~26}}\label{WordSet_8h_a6572f1706059832f94025fa12c6c45ed}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{WordSet_8h_a6bade9b0803c693bdfecf09d680a5239}{\index{Word\-Set.\-h@{Word\-Set.\-h}!Word\-Set@{Word\-Set}}
+\index{Word\-Set@{Word\-Set}!WordSet.h@{Word\-Set.\-h}}
+\subsubsection[{Word\-Set}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Word\-Set}  {\bf Word\-Set}}}\label{WordSet_8h_a6bade9b0803c693bdfecf09d680a5239}
+
+
+A \hyperlink{structWordSet}{Word\-Set}. children\mbox{[}letter-\/'0'\mbox{]} == N\-U\-L\-L if there is no child with 'letter'. 
+
+\hypertarget{WordSet_8h_a328a936fc0cea5a9936ca8723a01938c}{\index{Word\-Set.\-h@{Word\-Set.\-h}!Word\-Set\-Node@{Word\-Set\-Node}}
+\index{Word\-Set\-Node@{Word\-Set\-Node}!WordSet.h@{Word\-Set.\-h}}
+\subsubsection[{Word\-Set\-Node}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Word\-Set\-Node}  {\bf Word\-Set\-Node}}}\label{WordSet_8h_a328a936fc0cea5a9936ca8723a01938c}
+
+
+A trie node. children\mbox{[}letter-\/'0'\mbox{]} == N\-U\-L\-L if there is no child with 'letter'. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{WordSet_8h_a8219431f1280ec689b0bfedc5c030f6f}{\index{Word\-Set.\-h@{Word\-Set.\-h}!Word\-Set\-\_\-contains@{Word\-Set\-\_\-contains}}
+\index{Word\-Set\-\_\-contains@{Word\-Set\-\_\-contains}!WordSet.h@{Word\-Set.\-h}}
+\subsubsection[{Word\-Set\-\_\-contains}]{\setlength{\rightskip}{0pt plus 5cm}bool Word\-Set\-\_\-contains (
+\begin{DoxyParamCaption}
+\item[{{\bf Word\-Set} $\ast$}]{W\-S, }
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{WordSet_8h_a8219431f1280ec689b0bfedc5c030f6f}
+Returns if a string is contained inside a set. 
+\begin{DoxyParams}{Parameters}
+{\em Pointer} & to the set. \\
+\hline
+{\em Pointer} & to the string. \\
+\hline
+\end{DoxyParams}
+\hypertarget{WordSet_8h_a91f67820e6d32a88b4427cf8112ac45d}{\index{Word\-Set.\-h@{Word\-Set.\-h}!Word\-Set\-\_\-free@{Word\-Set\-\_\-free}}
+\index{Word\-Set\-\_\-free@{Word\-Set\-\_\-free}!WordSet.h@{Word\-Set.\-h}}
+\subsubsection[{Word\-Set\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void Word\-Set\-\_\-free (
+\begin{DoxyParamCaption}
+\item[{{\bf Word\-Set} $\ast$}]{W\-S}
+\end{DoxyParamCaption}
+)}}\label{WordSet_8h_a91f67820e6d32a88b4427cf8112ac45d}
+Frees a \hyperlink{structWordSet}{Word\-Set} from memory. 
+\begin{DoxyParams}{Parameters}
+{\em Pointer} & to set. \\
+\hline
+\end{DoxyParams}
+\hypertarget{WordSet_8h_ab08585df672f28b44ee9bd7f5fd56ce6}{\index{Word\-Set.\-h@{Word\-Set.\-h}!Word\-Set\-\_\-insert@{Word\-Set\-\_\-insert}}
+\index{Word\-Set\-\_\-insert@{Word\-Set\-\_\-insert}!WordSet.h@{Word\-Set.\-h}}
+\subsubsection[{Word\-Set\-\_\-insert}]{\setlength{\rightskip}{0pt plus 5cm}void Word\-Set\-\_\-insert (
+\begin{DoxyParamCaption}
+\item[{{\bf Word\-Set} $\ast$}]{W\-S, }
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{WordSet_8h_ab08585df672f28b44ee9bd7f5fd56ce6}
+Inserts a string into a set. 
+\begin{DoxyParams}{Parameters}
+{\em Pointer} & to the set. \\
+\hline
+{\em Pointer} & to the string. \\
+\hline
+\end{DoxyParams}
+\hypertarget{WordSet_8h_ad7b4c228c4f4a22c48a2394a05907e10}{\index{Word\-Set.\-h@{Word\-Set.\-h}!Word\-Set\-\_\-make@{Word\-Set\-\_\-make}}
+\index{Word\-Set\-\_\-make@{Word\-Set\-\_\-make}!WordSet.h@{Word\-Set.\-h}}
+\subsubsection[{Word\-Set\-\_\-make}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Word\-Set}$\ast$ Word\-Set\-\_\-make (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{WordSet_8h_ad7b4c228c4f4a22c48a2394a05907e10}
+Initializes a \hyperlink{structWordSet}{Word\-Set} with no contents. \begin{DoxyReturn}{Returns}
+Pointer to the built set. 
+\end{DoxyReturn}
+\hypertarget{WordSet_8h_a91ec5b8d8679c8473145bbb57a47d020}{\index{Word\-Set.\-h@{Word\-Set.\-h}!Word\-Set\-Node\-\_\-free@{Word\-Set\-Node\-\_\-free}}
+\index{Word\-Set\-Node\-\_\-free@{Word\-Set\-Node\-\_\-free}!WordSet.h@{Word\-Set.\-h}}
+\subsubsection[{Word\-Set\-Node\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void Word\-Set\-Node\-\_\-free (
+\begin{DoxyParamCaption}
+\item[{{\bf Word\-Set\-Node} $\ast$}]{N}
+\end{DoxyParamCaption}
+)}}\label{WordSet_8h_a91ec5b8d8679c8473145bbb57a47d020}
+Frees a node from memory. 
+\begin{DoxyParams}{Parameters}
+{\em Pointer} & to the node. \\
+\hline
+\end{DoxyParams}
+\hypertarget{WordSet_8h_a96cd3985f7e4feded1b84f04bc5be5f1}{\index{Word\-Set.\-h@{Word\-Set.\-h}!Word\-Set\-Node\-\_\-make@{Word\-Set\-Node\-\_\-make}}
+\index{Word\-Set\-Node\-\_\-make@{Word\-Set\-Node\-\_\-make}!WordSet.h@{Word\-Set.\-h}}
+\subsubsection[{Word\-Set\-Node\-\_\-make}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Word\-Set\-Node}$\ast$ Word\-Set\-Node\-\_\-make (
+\begin{DoxyParamCaption}
+\item[{char}]{L, }
+\item[{bool}]{E\-O\-W}
+\end{DoxyParamCaption}
+)}}\label{WordSet_8h_a96cd3985f7e4feded1b84f04bc5be5f1}
+Initializes a node holding a specified letter and indicating if it's the end of a word or not. 
+\begin{DoxyParams}{Parameters}
+{\em The} & letter. \\
+\hline
+{\em End\-\_\-of\-\_\-word} & boolean. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the built node. 
+\end{DoxyReturn}

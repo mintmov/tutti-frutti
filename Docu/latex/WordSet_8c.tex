@@ -1,0 +1,75 @@
+\hypertarget{WordSet_8c}{\section{/home/mintmov/\-Documents/\-Escuela/tutti-\/frutti/\-Word\-Set/\-Word\-Set.c File Reference}
+\label{WordSet_8c}\index{/home/mintmov/\-Documents/\-Escuela/tutti-\/frutti/\-Word\-Set/\-Word\-Set.\-c@{/home/mintmov/\-Documents/\-Escuela/tutti-\/frutti/\-Word\-Set/\-Word\-Set.\-c}}
+}
+
+
+Implements the \hyperlink{structCharSet}{Char\-Set} data structure.  
+
+
+{\ttfamily \#include \char`\"{}Word\-Set.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structWordSetNode}{Word\-Set\-Node} $\ast$ \hyperlink{WordSet_8c_a96cd3985f7e4feded1b84f04bc5be5f1}{Word\-Set\-Node\-\_\-make} (char L, bool E\-O\-W)
+\item 
+void \hyperlink{WordSet_8c_a91ec5b8d8679c8473145bbb57a47d020}{Word\-Set\-Node\-\_\-free} (\hyperlink{structWordSetNode}{Word\-Set\-Node} $\ast$N)
+\item 
+\hyperlink{structWordSet}{Word\-Set} $\ast$ \hyperlink{WordSet_8c_ad7b4c228c4f4a22c48a2394a05907e10}{Word\-Set\-\_\-make} (void)
+\item 
+void \hyperlink{WordSet_8c_a91f67820e6d32a88b4427cf8112ac45d}{Word\-Set\-\_\-free} (\hyperlink{structWordSet}{Word\-Set} $\ast$W\-S)
+\item 
+void \hyperlink{WordSet_8c_ab08585df672f28b44ee9bd7f5fd56ce6}{Word\-Set\-\_\-insert} (\hyperlink{structWordSet}{Word\-Set} $\ast$W\-S, char $\ast$str)
+\item 
+bool \hyperlink{WordSet_8c_a8219431f1280ec689b0bfedc5c030f6f}{Word\-Set\-\_\-contains} (\hyperlink{structWordSet}{Word\-Set} $\ast$W\-S, char $\ast$str)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements the \hyperlink{structCharSet}{Char\-Set} data structure. 
+
+\subsection{Function Documentation}
+\hypertarget{WordSet_8c_a8219431f1280ec689b0bfedc5c030f6f}{\index{Word\-Set.\-c@{Word\-Set.\-c}!Word\-Set\-\_\-contains@{Word\-Set\-\_\-contains}}
+\index{Word\-Set\-\_\-contains@{Word\-Set\-\_\-contains}!WordSet.c@{Word\-Set.\-c}}
+\subsubsection[{Word\-Set\-\_\-contains}]{\setlength{\rightskip}{0pt plus 5cm}bool Word\-Set\-\_\-contains (
+\begin{DoxyParamCaption}
+\item[{{\bf Word\-Set} $\ast$}]{W\-S, }
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{WordSet_8c_a8219431f1280ec689b0bfedc5c030f6f}
+\hypertarget{WordSet_8c_a91f67820e6d32a88b4427cf8112ac45d}{\index{Word\-Set.\-c@{Word\-Set.\-c}!Word\-Set\-\_\-free@{Word\-Set\-\_\-free}}
+\index{Word\-Set\-\_\-free@{Word\-Set\-\_\-free}!WordSet.c@{Word\-Set.\-c}}
+\subsubsection[{Word\-Set\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void Word\-Set\-\_\-free (
+\begin{DoxyParamCaption}
+\item[{{\bf Word\-Set} $\ast$}]{W\-S}
+\end{DoxyParamCaption}
+)}}\label{WordSet_8c_a91f67820e6d32a88b4427cf8112ac45d}
+\hypertarget{WordSet_8c_ab08585df672f28b44ee9bd7f5fd56ce6}{\index{Word\-Set.\-c@{Word\-Set.\-c}!Word\-Set\-\_\-insert@{Word\-Set\-\_\-insert}}
+\index{Word\-Set\-\_\-insert@{Word\-Set\-\_\-insert}!WordSet.c@{Word\-Set.\-c}}
+\subsubsection[{Word\-Set\-\_\-insert}]{\setlength{\rightskip}{0pt plus 5cm}void Word\-Set\-\_\-insert (
+\begin{DoxyParamCaption}
+\item[{{\bf Word\-Set} $\ast$}]{W\-S, }
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{WordSet_8c_ab08585df672f28b44ee9bd7f5fd56ce6}
+\hypertarget{WordSet_8c_ad7b4c228c4f4a22c48a2394a05907e10}{\index{Word\-Set.\-c@{Word\-Set.\-c}!Word\-Set\-\_\-make@{Word\-Set\-\_\-make}}
+\index{Word\-Set\-\_\-make@{Word\-Set\-\_\-make}!WordSet.c@{Word\-Set.\-c}}
+\subsubsection[{Word\-Set\-\_\-make}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Word\-Set}$\ast$ Word\-Set\-\_\-make (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{WordSet_8c_ad7b4c228c4f4a22c48a2394a05907e10}
+\hypertarget{WordSet_8c_a91ec5b8d8679c8473145bbb57a47d020}{\index{Word\-Set.\-c@{Word\-Set.\-c}!Word\-Set\-Node\-\_\-free@{Word\-Set\-Node\-\_\-free}}
+\index{Word\-Set\-Node\-\_\-free@{Word\-Set\-Node\-\_\-free}!WordSet.c@{Word\-Set.\-c}}
+\subsubsection[{Word\-Set\-Node\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void Word\-Set\-Node\-\_\-free (
+\begin{DoxyParamCaption}
+\item[{{\bf Word\-Set\-Node} $\ast$}]{N}
+\end{DoxyParamCaption}
+)}}\label{WordSet_8c_a91ec5b8d8679c8473145bbb57a47d020}
+\hypertarget{WordSet_8c_a96cd3985f7e4feded1b84f04bc5be5f1}{\index{Word\-Set.\-c@{Word\-Set.\-c}!Word\-Set\-Node\-\_\-make@{Word\-Set\-Node\-\_\-make}}
+\index{Word\-Set\-Node\-\_\-make@{Word\-Set\-Node\-\_\-make}!WordSet.c@{Word\-Set.\-c}}
+\subsubsection[{Word\-Set\-Node\-\_\-make}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Word\-Set\-Node}$\ast$ Word\-Set\-Node\-\_\-make (
+\begin{DoxyParamCaption}
+\item[{char}]{L, }
+\item[{bool}]{E\-O\-W}
+\end{DoxyParamCaption}
+)}}\label{WordSet_8c_a96cd3985f7e4feded1b84f04bc5be5f1}

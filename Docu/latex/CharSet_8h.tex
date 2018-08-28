@@ -6,12 +6,20 @@
 Defines the \hyperlink{structCharSet}{Char\-Set} data structure.  
 
 
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{structCharSetNode}{Char\-Set\-Node}
 \begin{DoxyCompactList}\small\item\em A Node of a list. \end{DoxyCompactList}\item 
 struct \hyperlink{structCharSet}{Char\-Set}
+\begin{DoxyCompactList}\small\item\em A \hyperlink{structCharSet}{Char\-Set}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structCharSetNode}{Char\-Set\-Node} \hyperlink{CharSet_8h_aefa0771504d4c3cd418336c204d554e0}{Char\-Set\-Node}
+\begin{DoxyCompactList}\small\item\em A Node of a list. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structCharSet}{Char\-Set} \hyperlink{CharSet_8h_a11508f2f61ac6c516f6169cb454d03cb}{Char\-Set}
 \begin{DoxyCompactList}\small\item\em A \hyperlink{structCharSet}{Char\-Set}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -36,6 +44,23 @@ Defines the \hyperlink{structCharSet}{Char\-Set} data structure. \hyperlink{stru
 It's implemented as a singly linked list. Each node contains a letter and a random I\-D number. When it's initialized, the set is populated with all letters of the alphabet and sorted by these random I\-D numbers, randomizing it.
 
 Extracting a random letter is done by extracting the head of the list. 
+
+\subsection{Typedef Documentation}
+\hypertarget{CharSet_8h_a11508f2f61ac6c516f6169cb454d03cb}{\index{Char\-Set.\-h@{Char\-Set.\-h}!Char\-Set@{Char\-Set}}
+\index{Char\-Set@{Char\-Set}!CharSet.h@{Char\-Set.\-h}}
+\subsubsection[{Char\-Set}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Char\-Set}  {\bf Char\-Set}}}\label{CharSet_8h_a11508f2f61ac6c516f6169cb454d03cb}
+
+
+A \hyperlink{structCharSet}{Char\-Set}. 
+
+\hypertarget{CharSet_8h_aefa0771504d4c3cd418336c204d554e0}{\index{Char\-Set.\-h@{Char\-Set.\-h}!Char\-Set\-Node@{Char\-Set\-Node}}
+\index{Char\-Set\-Node@{Char\-Set\-Node}!CharSet.h@{Char\-Set.\-h}}
+\subsubsection[{Char\-Set\-Node}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Char\-Set\-Node}  {\bf Char\-Set\-Node}}}\label{CharSet_8h_aefa0771504d4c3cd418336c204d554e0}
+
+
+A Node of a list. 
+
+
 
 \subsection{Function Documentation}
 \hypertarget{CharSet_8h_a659539c9414f5d6a08325ad8e7323ba6}{\index{Char\-Set.\-h@{Char\-Set.\-h}!Char\-Set\-\_\-free@{Char\-Set\-\_\-free}}
@@ -67,7 +92,7 @@ Pointer to the built set.
 \item[{{\bf Char\-Set} $\ast$}]{S}
 \end{DoxyParamCaption}
 )}}\label{CharSet_8h_a12e2887b60bc5130525919dc3fb73cb3}
-Extracts a random letter from the set. 
+Extracts a random letter from the set. Returns '\textbackslash{}0' if the list is empty. 
 \begin{DoxyParams}{Parameters}
 {\em Pointer} & to the set. \\
 \hline

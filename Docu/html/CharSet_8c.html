@@ -68,7 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,6 +83,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">CharSet.c File Reference</div>  </div>
 </div><!--header-->
@@ -91,9 +93,163 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>Implements the <a class="el" href="structCharSet.html" title="A CharSet. ">CharSet</a> data structure.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="CharSet_8h_source.html">CharSet.h</a>&quot;</code><br/>
-</div><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a722ed98732f1f04e4332b8da4ce4df3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCharSetNode.html">CharSetNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CharSet_8c.html#a722ed98732f1f04e4332b8da4ce4df3d">CharSetNode_make</a> (char L)</td></tr>
+<tr class="separator:a722ed98732f1f04e4332b8da4ce4df3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a580b10bdeeef9661a0b914d1a434fffb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CharSet_8c.html#a580b10bdeeef9661a0b914d1a434fffb">CharSetNode_free</a> (<a class="el" href="structCharSetNode.html">CharSetNode</a> *N)</td></tr>
+<tr class="separator:a580b10bdeeef9661a0b914d1a434fffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7b1c353118c9d2369d6d93f91518d58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCharSet.html">CharSet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CharSet_8c.html#ac7b1c353118c9d2369d6d93f91518d58">CharSet_make</a> (void)</td></tr>
+<tr class="separator:ac7b1c353118c9d2369d6d93f91518d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a659539c9414f5d6a08325ad8e7323ba6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CharSet_8c.html#a659539c9414f5d6a08325ad8e7323ba6">CharSet_free</a> (<a class="el" href="structCharSet.html">CharSet</a> *S)</td></tr>
+<tr class="separator:a659539c9414f5d6a08325ad8e7323ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68c979ebbd08740c984651ad3cbe1fa0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CharSet_8c.html#a68c979ebbd08740c984651ad3cbe1fa0">pf_CharSet_sort</a> (<a class="el" href="structCharSet.html">CharSet</a> *S)</td></tr>
+<tr class="memdesc:a68c979ebbd08740c984651ad3cbe1fa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sorts a list by IDs, randomizing it. A merge sort is used, sorting in O(NlogN).  <a href="#a68c979ebbd08740c984651ad3cbe1fa0">More...</a><br/></td></tr>
+<tr class="separator:a68c979ebbd08740c984651ad3cbe1fa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12e2887b60bc5130525919dc3fb73cb3"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CharSet_8c.html#a12e2887b60bc5130525919dc3fb73cb3">CharSet_pop</a> (<a class="el" href="structCharSet.html">CharSet</a> *S)</td></tr>
+<tr class="separator:a12e2887b60bc5130525919dc3fb73cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implements the <a class="el" href="structCharSet.html" title="A CharSet. ">CharSet</a> data structure. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a659539c9414f5d6a08325ad8e7323ba6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CharSet_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structCharSet.html">CharSet</a> *&#160;</td>
+          <td class="paramname"><em>S</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Frees a set from memory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Pointer</td><td>to the set. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac7b1c353118c9d2369d6d93f91518d58"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structCharSet.html">CharSet</a>* CharSet_make </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes a <a class="el" href="structCharSet.html" title="A CharSet. ">CharSet</a> for use. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the built set. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a12e2887b60bc5130525919dc3fb73cb3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char CharSet_pop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structCharSet.html">CharSet</a> *&#160;</td>
+          <td class="paramname"><em>S</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Extracts a random letter from the set. Returns '\0' if the list is empty. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Pointer</td><td>to the set. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Letter extracted. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a580b10bdeeef9661a0b914d1a434fffb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CharSetNode_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structCharSetNode.html">CharSetNode</a> *&#160;</td>
+          <td class="paramname"><em>N</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Frees a node from memory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Pointer</td><td>to the node. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a722ed98732f1f04e4332b8da4ce4df3d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structCharSetNode.html">CharSetNode</a>* CharSetNode_make </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes a node holding a specified letter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">The</td><td>letter. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the built node. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a68c979ebbd08740c984651ad3cbe1fa0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pf_CharSet_sort </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structCharSet.html">CharSet</a> *&#160;</td>
+          <td class="paramname"><em>S</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sorts a list by IDs, randomizing it. A merge sort is used, sorting in O(NlogN). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Pointer</td><td>to the set. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

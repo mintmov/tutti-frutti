@@ -67,6 +67,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="globals.html"><span>All</span></a></li>
       <li class="current"><a href="globals_func.html"><span>Functions</span></a></li>
+      <li><a href="globals_type.html"><span>Typedefs</span></a></li>
+      <li><a href="globals_defs.html"><span>Macros</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -75,7 +77,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,25 +89,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 &#160;<ul>
 <li>CharSet_free()
-: <a class="el" href="CharSet_8h.html#a659539c9414f5d6a08325ad8e7323ba6">CharSet.h</a>
+: <a class="el" href="CharSet_8c.html#a659539c9414f5d6a08325ad8e7323ba6">CharSet.c</a>
+, <a class="el" href="CharSet_8h.html#a659539c9414f5d6a08325ad8e7323ba6">CharSet.h</a>
 </li>
 <li>CharSet_make()
 : <a class="el" href="CharSet_8h.html#ac7b1c353118c9d2369d6d93f91518d58">CharSet.h</a>
+, <a class="el" href="CharSet_8c.html#ac7b1c353118c9d2369d6d93f91518d58">CharSet.c</a>
 </li>
 <li>CharSet_pop()
-: <a class="el" href="CharSet_8h.html#a12e2887b60bc5130525919dc3fb73cb3">CharSet.h</a>
+: <a class="el" href="CharSet_8c.html#a12e2887b60bc5130525919dc3fb73cb3">CharSet.c</a>
+, <a class="el" href="CharSet_8h.html#a12e2887b60bc5130525919dc3fb73cb3">CharSet.h</a>
 </li>
 <li>CharSetNode_free()
-: <a class="el" href="CharSet_8h.html#a580b10bdeeef9661a0b914d1a434fffb">CharSet.h</a>
+: <a class="el" href="CharSet_8c.html#a580b10bdeeef9661a0b914d1a434fffb">CharSet.c</a>
+, <a class="el" href="CharSet_8h.html#a580b10bdeeef9661a0b914d1a434fffb">CharSet.h</a>
 </li>
 <li>CharSetNode_make()
 : <a class="el" href="CharSet_8h.html#a722ed98732f1f04e4332b8da4ce4df3d">CharSet.h</a>
+, <a class="el" href="CharSet_8c.html#a722ed98732f1f04e4332b8da4ce4df3d">CharSet.c</a>
 </li>
 <li>main()
 : <a class="el" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main.c</a>
 </li>
 <li>pf_CharSet_sort()
-: <a class="el" href="CharSet_8h.html#a68c979ebbd08740c984651ad3cbe1fa0">CharSet.h</a>
+: <a class="el" href="CharSet_8c.html#a68c979ebbd08740c984651ad3cbe1fa0">CharSet.c</a>
+, <a class="el" href="CharSet_8h.html#a68c979ebbd08740c984651ad3cbe1fa0">CharSet.h</a>
+</li>
+<li>WordSet_contains()
+: <a class="el" href="WordSet_8c.html#a8219431f1280ec689b0bfedc5c030f6f">WordSet.c</a>
+, <a class="el" href="WordSet_8h.html#a8219431f1280ec689b0bfedc5c030f6f">WordSet.h</a>
+</li>
+<li>WordSet_free()
+: <a class="el" href="WordSet_8h.html#a91f67820e6d32a88b4427cf8112ac45d">WordSet.h</a>
+, <a class="el" href="WordSet_8c.html#a91f67820e6d32a88b4427cf8112ac45d">WordSet.c</a>
+</li>
+<li>WordSet_insert()
+: <a class="el" href="WordSet_8c.html#ab08585df672f28b44ee9bd7f5fd56ce6">WordSet.c</a>
+, <a class="el" href="WordSet_8h.html#ab08585df672f28b44ee9bd7f5fd56ce6">WordSet.h</a>
+</li>
+<li>WordSet_make()
+: <a class="el" href="WordSet_8h.html#ad7b4c228c4f4a22c48a2394a05907e10">WordSet.h</a>
+, <a class="el" href="WordSet_8c.html#ad7b4c228c4f4a22c48a2394a05907e10">WordSet.c</a>
+</li>
+<li>WordSetNode_free()
+: <a class="el" href="WordSet_8h.html#a91ec5b8d8679c8473145bbb57a47d020">WordSet.h</a>
+, <a class="el" href="WordSet_8c.html#a91ec5b8d8679c8473145bbb57a47d020">WordSet.c</a>
+</li>
+<li>WordSetNode_make()
+: <a class="el" href="WordSet_8c.html#a96cd3985f7e4feded1b84f04bc5be5f1">WordSet.c</a>
+, <a class="el" href="WordSet_8h.html#a96cd3985f7e4feded1b84f04bc5be5f1">WordSet.h</a>
 </li>
 </ul>
 </div><!-- contents -->
