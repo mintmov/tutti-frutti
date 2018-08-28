@@ -9,7 +9,8 @@ int main ( void ) {
   CharSet* set = CharSet_make();
 
   while( set->size > 0 ) {
-    printf("%c ", CharSet_pop( set ) );
+    printf("%d ", set->head->random );
+    printf("%c\n", CharSet_pop( set ) );
   }
 
   CharSet_free( set );
