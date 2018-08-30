@@ -5,7 +5,7 @@
  * Wordset allows insertion of strings and consulting wether a string is contained or not.
  *
  *
- * It's implemented with a trie. Each node contains an array of children (pointers to trie nodes).
+ * It's implemented with a trie. Each node contains a list of children (pointers to trie nodes).
  *
  */
 
@@ -18,22 +18,32 @@
 
 #define ALPHABET_SIZE 26
 
-/**
- * @brief A trie node.
- * children[letter-'0'] == NULL if there is no child with 'letter'.
- */
-typedef struct WordsetNode {
-  char letter; /**< Letter. */
-  bool end_of_word; /**< True if this is the end of a word, false otherwise. */
-  struct WordsetNode* children[ALPHABET_SIZE]; /**< Pointers to children. */
-} WordsetNode;
+typedef struct Wordset                 Wordset;
+typedef struct WordsetNode             WordsetNode;
+typedef struct WordsetNodeChildren     WordsetNodeChildren;
+typedef struct WordsetNodeChildrenNode WordsetNodeChildrenNode;
 
 /**
- * Initializes a node holding a specified letter and indicating if it's the end of a word or not.
- * @param The letter.
- * @param End_of_word boolean.
- * @return Pointer to the built node.
+ * 
  */
+typedef struct Wordset {
+  WordsetNodeChildren* children;
+} Wordset;
+
+typedef struct WordsetNode {
+  char letter;
+  WordsetNodeChildren* children;
+} WordsetNode;
+
+typedef struct WordsetNodeChildren {
+  WordsetNodeChildrenNode* head;
+} WordsetNodeChildren;
+
+typedef struct WordsetNodeChildrenNode {
+  WordsetNode* node;
+  WordsetNodeChildrenNode* next;
+} WordsetNodeChildrenNode;
+
 WordsetNode* WordsetNode_make ( char L, bool EOW );
 
 /**
@@ -41,14 +51,6 @@ WordsetNode* WordsetNode_make ( char L, bool EOW );
  * @param Pointer to the node.
  */
 void WordsetNode_free ( WordsetNode* N );
-
-/**
- * @brief A Wordset.
- * children[letter-'0'] == NULL if there is no child with 'letter'.
- */
-typedef struct Wordset {
-  struct WordsetNode* children[ALPHABET_SIZE]; /**< Pointers to children. */
-} Wordset;
 
 /**
  * Initializes a Wordset with no contents.
