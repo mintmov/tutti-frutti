@@ -4,22 +4,22 @@
  *
  */
 
-#include "WordSet.h"
+#include "Wordset.h"
 
 
-WordSetNode* WordSetNode_make ( char L, bool EOW );
+WordsetNode* WordsetNode_make ( char L, bool EOW );
 
 
-void WordSetNode_free ( WordSetNode* N );
+void WordsetNode_free ( WordsetNode* N );
 
 
-WordSet* WordSet_make ( void );
+Wordset* Wordset_make ( void );
 
 
-void WordSet_free ( WordSet* WS );
+void Wordset_free ( Wordset* WS );
 
 
-void WordSet_insert ( WordSet* WS, char* str );
+void Wordset_insert ( Wordset* WS, char* str );
 
 
-bool WordSet_contains ( WordSet* WS, char* str );
+bool Wordset_contains ( Wordset* WS, char* str );

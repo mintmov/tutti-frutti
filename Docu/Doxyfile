@@ -734,7 +734,7 @@ WARN_LOGFILE           =
 # Note: If this tag is empty the current directory is searched.
 
 <<<<<<< HEAD
-INPUT                  = ../CharSet/ ../main.c ../build.sh ../WordSet/
+INPUT                  = ../CharSet/ ../main.c ../build.sh ../Wordset/
 =======
 INPUT                  = ../Charset/ ../main.c ../build.sh
 >>>>>>> 901f757... Changed names and naming convention (read Naming Conventions.txt).

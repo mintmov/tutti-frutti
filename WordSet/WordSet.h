@@ -1,8 +1,8 @@
 /**
  * @file
- * @brief Defines the WordSet data structure.
+ * @brief Defines the Wordset data structure.
  *
- * WordSet allows insertion of strings and consulting wether a string is contained or not.
+ * Wordset allows insertion of strings and consulting wether a string is contained or not.
  *
  *
  * It's implemented with a trie. Each node contains an array of children (pointers to trie nodes).
@@ -22,11 +22,11 @@
  * @brief A trie node.
  * children[letter-'0'] == NULL if there is no child with 'letter'.
  */
-typedef struct WordSetNode {
+typedef struct WordsetNode {
   char letter; /**< Letter. */
   bool end_of_word; /**< True if this is the end of a word, false otherwise. */
-  struct WordSetNode* children[ALPHABET_SIZE]; /**< Pointers to children. */
-} WordSetNode;
+  struct WordsetNode* children[ALPHABET_SIZE]; /**< Pointers to children. */
+} WordsetNode;
 
 /**
  * Initializes a node holding a specified letter and indicating if it's the end of a word or not.
@@ -34,47 +34,47 @@ typedef struct WordSetNode {
  * @param End_of_word boolean.
  * @return Pointer to the built node.
  */
-WordSetNode* WordSetNode_make ( char L, bool EOW );
+WordsetNode* WordsetNode_make ( char L, bool EOW );
 
 /**
  * Frees a node from memory.
  * @param Pointer to the node.
  */
-void WordSetNode_free ( WordSetNode* N );
+void WordsetNode_free ( WordsetNode* N );
 
 /**
- * @brief A WordSet.
+ * @brief A Wordset.
  * children[letter-'0'] == NULL if there is no child with 'letter'.
  */
-typedef struct WordSet {
-  struct WordSetNode* children[ALPHABET_SIZE]; /**< Pointers to children. */
-} WordSet;
+typedef struct Wordset {
+  struct WordsetNode* children[ALPHABET_SIZE]; /**< Pointers to children. */
+} Wordset;
 
 /**
- * Initializes a WordSet with no contents.
+ * Initializes a Wordset with no contents.
  * @return Pointer to the built set.
  */
-WordSet* WordSet_make ( void );
+Wordset* Wordset_make ( void );
 
 /**
- * Frees a WordSet from memory.
+ * Frees a Wordset from memory.
  * @param Pointer to set.
  */
-void WordSet_free ( WordSet* WS );
+void Wordset_free ( Wordset* WS );
 
 /**
  * Inserts a string into a set.
  * @param Pointer to the set.
  * @param Pointer to the string.
  */
-void WordSet_insert ( WordSet* WS, char* str );
+void Wordset_insert ( Wordset* WS, char* str );
 
 /**
  * Returns if a string is contained inside a set.
  * @param Pointer to the set.
  * @param Pointer to the string.
  */
-bool WordSet_contains ( WordSet* WS, char* str );
+bool Wordset_contains ( Wordset* WS, char* str );
 
 
 #undef    INCLUDE_WORDSET_H
