@@ -46,7 +46,6 @@ void CharSetNode_free ( CharSetNode* N );
  */
 typedef struct CharSet {
   CharSetNode* head; /**< The head of the list. */
-  short size; /**< The number of remaining nodes. */
 } CharSet;
 
 /**

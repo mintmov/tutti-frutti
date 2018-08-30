@@ -8,7 +8,7 @@ int main ( void ) {
 
   CharSet* set = CharSet_make();
 
-  while( set->size > 0 ) {
+  while( set->head != NULL ) {
     printf("%d ", set->head->random );
     printf("%c\n", CharSet_pop( set ) );
   }
