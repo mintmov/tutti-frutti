@@ -24,7 +24,6 @@ void CharSetNode_free ( CharSetNode* N ) {
 CharSet* CharSet_make ( void ) {
 
   CharSet* set = malloc( sizeof(CharSet) );
-  set->size = 0;
   set->head = NULL;
 
   CharSetNode* node;
@@ -34,7 +33,6 @@ CharSet* CharSet_make ( void ) {
 
     node->next = set->head; // append it to the list
     set->head  = node;
-    set->size++;
   }
 
   return set;
@@ -70,7 +68,6 @@ char CharSet_pop ( CharSet* S ) {
 
   free( first ); // delete first node
   S->head = second; // make the second node head
-  S->size--;
   return ret;
 
 }
