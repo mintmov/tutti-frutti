@@ -1,3 +1,0 @@
-1) Add documentation to 'CharSet.h'.
-
-2) Finish everything.
