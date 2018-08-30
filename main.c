@@ -1,19 +1,19 @@
 #include <stdio.h>
 #include <time.h>
-#include "CharSet/CharSet.h"
+#include "Charset/Charset.h"
 
 int main ( void ) {
 
   srand( time(NULL) );
 
-  CharSet* set = CharSet_make();
+  Charset* set = Charset_make();
 
   while( set->head != NULL ) {
     printf("%d ", set->head->random );
-    printf("%c\n", CharSet_pop( set ) );
+    printf("%c\n", Charset_pop( set ) );
   }
 
-  CharSet_free( set );
+  Charset_free( set );
 
   return 0;
 }

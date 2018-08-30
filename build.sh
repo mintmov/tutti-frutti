@@ -1,15 +1,15 @@
 #!/bin/bash
 
 
-#build CharSet
-cd CharSet
-gcc -o CharSet.o -c CharSet.c -std=c11
-mv CharSet.o ..
+#build Charset
+cd Charset
+gcc -o Charset.o -c Charset.c -std=c11
+mv Charset.o ..
 cd ..
 
 
 #build main
-gcc -o main.exe CharSet.o main.c -std=c11
+gcc -o main.exe Charset.o main.c -std=c11
 
 
 #run
@@ -18,6 +18,6 @@ read -p ""
 
 
 #cleanup
-rm -f CharSet.o
+rm -f Charset.o
 rm -f main.exe
 clear

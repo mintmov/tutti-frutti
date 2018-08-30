@@ -733,7 +733,11 @@ WARN_LOGFILE           =
 # spaces.
 # Note: If this tag is empty the current directory is searched.
 
+<<<<<<< HEAD
 INPUT                  = ../CharSet/ ../main.c ../build.sh ../WordSet/
+=======
+INPUT                  = ../Charset/ ../main.c ../build.sh
+>>>>>>> 901f757... Changed names and naming convention (read Naming Conventions.txt).
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses

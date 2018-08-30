@@ -1,14 +1,15 @@
 Naming convention:
 
  .Structs / typedefs: TitleCase.
- Ex.: CharSetNode.
+ One upper case is used for each level of hierearchy in classes.
+ Ex.: Charset, CharsetNode, Wordset, WordsetNode, WordsetNodeChildren.
 
  .Struct functions: StructName + function_name_in_snakecase.
- Ex.: CharSet_make.
+ Ex.: Charset_make.
 
  .Struct functions that shouldn't be called directly (private):
  "pf_" + StructName + function_name_in_snake_case.
- Ex.: pf_CharSet_sort.
+ Ex.: pf_Charset_sort.
 
  .Local variables: lowercase or snake_case.
  Ex. low, high, mid, node_1, node_2.

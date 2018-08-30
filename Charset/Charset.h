@@ -1,8 +1,8 @@
 /**
  * @file
- * @brief Defines the CharSet data structure.
+ * @brief Defines the Charset data structure.
  *
- * CharSet can be initialized with all the letters of the english alphabet and allows extraction of
+ * Charset can be initialized with all the letters of the english alphabet and allows extraction of
  * random letters.
  *
  * It's implemented as a singly linked list. Each node contains a letter and a random ID number.
@@ -21,51 +21,51 @@
 /**
  * @brief A Node of a list.
  */
-typedef struct CharSetNode {
+typedef struct CharsetNode {
   char letter; /**< Letter. */
   short random; /**< Random ID number. */
-  struct CharSetNode* next; /**< Pointer to next node. */
-} CharSetNode;
+  struct CharsetNode* next; /**< Pointer to next node. */
+} CharsetNode;
 
 /**
  * Initializes a node holding a specified letter.
  * @param The letter.
  * @return Pointer to the built node.
  */
-CharSetNode* CharSetNode_make ( char L );
+CharsetNode* CharsetNode_make ( char L );
 
 /**
  * Frees a node from memory.
  * @param Pointer to the node.
  */
-void CharSetNode_free ( CharSetNode* N );
+void CharsetNode_free ( CharsetNode* N );
 
 
 /**
- * @brief A CharSet.
+ * @brief A Charset.
  */
-typedef struct CharSet {
-  CharSetNode* head; /**< The head of the list. */
-} CharSet;
+typedef struct Charset {
+  CharsetNode* head; /**< The head of the list. */
+} Charset;
 
 /**
- * Initializes a CharSet for use.
+ * Initializes a Charset for use.
  * @return Pointer to the built set.
  */
-CharSet* CharSet_make ( void );
+Charset* Charset_make ( void );
 
 /**
  * Frees a set from memory.
  * @param Pointer to the set.
  */
-void CharSet_free ( CharSet* S );
+void Charset_free ( Charset* S );
 
 /**
  * @brief Sorts a list by IDs, randomizing it.
  * A merge sort is used, sorting in O(NlogN).
  * @param Pointer to the set.
  */
-void pf_CharSet_sort ( CharSet* S );
+void pf_Charset_sort ( Charset* S );
 
 /**
  * Extracts a random letter from the set.
@@ -73,7 +73,7 @@ void pf_CharSet_sort ( CharSet* S );
  * @param Pointer to the set.
  * @return Letter extracted.
  */
-char CharSet_pop ( CharSet* S );
+char Charset_pop ( Charset* S );
 
 
 #undef    INCLUDE_CHARSET_H
